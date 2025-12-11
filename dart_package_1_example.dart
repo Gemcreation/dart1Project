@@ -68,4 +68,9 @@ void main() {
   
   var reverseFood = food3.reversed;
   print("Reverse List: $reverseFood");
+
+  var myFirstName = "Gem";
+  var myLastName = "Creation";
+  var myFullName = "My name is: $myFirstName $myLastName";
+  print(myFullName);
 }
