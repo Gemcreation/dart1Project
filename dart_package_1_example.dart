@@ -81,10 +81,45 @@
 void main() {
 
   //varibales we have the int, bool, string, dynamic
-  var myFirstName = "Gem";
-  var myLastName = "Creation";
-  var myFullName = "My name is: $myFirstName $myLastName";
-  print(myFullName);
+  // var myFirstName = "Gem";
+  // var myLastName = "Creation";
+  // var myFullName = "My name is: $myFirstName $myLastName";
+  // print(myFullName);
 
   //Control flows, conditional statement
+  //We have if, if else, else if and switch statement condition
+  /*
+  Exericise to test our knowledge
+  Develop a program to calculate the shipping cost based on destination zone and the weight of the package(you will be provided). Calculate the shipping cost according to these condition
+  1) If the destination zone is "XYZ", the shipping cpst is $5 per kilogram
+  2) If the destination zone is "ABC", the shipping cost is $7 per kilogram
+  3) If the destination zone is not "XYZ", "ABC", "PQR", display a error message
+  */
+  String destinationZone = "ABC";
+  double weightInKg = 6;
+
+  if (destinationZone == "ABC") {
+    print("Shipping Cost: ${weightInKg * 7}");
+  } else if(destinationZone == "PQR") {
+    print("Shipping Cost: ${weightInKg * 10}");
+  } else if(destinationZone == "XYZ") {
+    print("Shipping Cost: ${weightInKg * 5}");
+  }
+  else{
+    print("Invalid destination zone!");
+  }
+
+  String CheckDestinationZone = "XYZ";
+  double CheckWeightInKg = 6;
+  switch(CheckDestinationZone){
+    case "ABC":
+      print("Shipping Cost: ${weightInKg * 7}");
+      break;
+    case "PQR":
+      print("Shipping Cost: ${weightInKg * 10}");
+      break;
+    case "XYZ":
+      print("Shipping Cost: ${weightInKg * 5}");
+      break;
+  }
 }
