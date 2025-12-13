@@ -78,48 +78,73 @@
 //   var reverseFood = food3.reversed;
 //   print("Reverse List: $reverseFood");
 // }
-void main() {
+// void main() {
 
-  //varibales we have the int, bool, string, dynamic
-  // var myFirstName = "Gem";
-  // var myLastName = "Creation";
-  // var myFullName = "My name is: $myFirstName $myLastName";
-  // print(myFullName);
+//   //varibales we have the int, bool, string, dynamic
+//   // var myFirstName = "Gem";
+//   // var myLastName = "Creation";
+//   // var myFullName = "My name is: $myFirstName $myLastName";
+//   // print(myFullName);
 
-  //Control flows, conditional statement
-  //We have if, if else, else if and switch statement condition
-  /*
-  Exericise to test our knowledge
-  Develop a program to calculate the shipping cost based on destination zone and the weight of the package(you will be provided). Calculate the shipping cost according to these condition
-  1) If the destination zone is "XYZ", the shipping cpst is $5 per kilogram
-  2) If the destination zone is "ABC", the shipping cost is $7 per kilogram
-  3) If the destination zone is not "XYZ", "ABC", "PQR", display a error message
-  */
-  String destinationZone = "ABC";
-  double weightInKg = 6;
+//   //Control flows, conditional statement
+//   //We have if, if else, else if and switch statement condition
+//   /*
+//   Exericise to test our knowledge
+//   Develop a program to calculate the shipping cost based on destination zone and the weight of the package(you will be provided). Calculate the shipping cost according to these condition
+//   1) If the destination zone is "XYZ", the shipping cpst is $5 per kilogram
+//   2) If the destination zone is "ABC", the shipping cost is $7 per kilogram
+//   3) If the destination zone is not "XYZ", "ABC", "PQR", display a error message
+//   */
+//   String destinationZone = "ABC";
+//   double weightInKg = 6;
 
-  if (destinationZone == "ABC") {
-    print("Shipping Cost: ${weightInKg * 7}");
-  } else if(destinationZone == "PQR") {
-    print("Shipping Cost: ${weightInKg * 10}");
-  } else if(destinationZone == "XYZ") {
-    print("Shipping Cost: ${weightInKg * 5}");
+//   if (destinationZone == "ABC") {
+//     print("Shipping Cost: ${weightInKg * 7}");
+//   } else if(destinationZone == "PQR") {
+//     print("Shipping Cost: ${weightInKg * 10}");
+//   } else if(destinationZone == "XYZ") {
+//     print("Shipping Cost: ${weightInKg * 5}");
+//   }
+//   else{
+//     print("Invalid destination zone!");
+//   }
+
+//   String CheckDestinationZone = "PQR";
+//   double CheckWeightInKg = 5;
+//   switch(CheckDestinationZone){
+//     case "ABC":
+//       print("Shipping Cost: ${CheckWeightInKg * 7}");
+//       break;
+//     case "PQR":
+//       print("Shipping Cost: ${CheckWeightInKg * 10}");
+//       break;
+//     case "XYZ":
+//       print("Shipping Cost: ${CheckWeightInKg * 5}");
+//       break;
+//   }
+// }
+
+//working with class in dart
+void main(){
+  final cookie = Cookie("Square", 12.5);
+  print(cookie.shape);
+  print(cookie.size);
+  //this is to access the class without a constructor
+  // print('${Cookie().size} cm');
+  // Cookie().baking();
+}
+class Cookie{
+  String shape;
+  double size;
+  // String shape = "Square";
+  // double size = 15.2;
+  //below is constructor
+  Cookie(this.shape, this.size){
+    print("Constructor Cookies Printed");
+    // baking();
   }
-  else{
-    print("Invalid destination zone!");
-  }
-
-  String CheckDestinationZone = "PQR";
-  double CheckWeightInKg = 5;
-  switch(CheckDestinationZone){
-    case "ABC":
-      print("Shipping Cost: ${CheckWeightInKg * 7}");
-      break;
-    case "PQR":
-      print("Shipping Cost: ${CheckWeightInKg * 10}");
-      break;
-    case "XYZ":
-      print("Shipping Cost: ${CheckWeightInKg * 5}");
-      break;
-  }
+  //this is a method
+  // void baking() {
+  //   print("Baking has started");
+  // }
 }
