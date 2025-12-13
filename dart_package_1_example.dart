@@ -109,17 +109,17 @@ void main() {
     print("Invalid destination zone!");
   }
 
-  String CheckDestinationZone = "XYZ";
-  double CheckWeightInKg = 6;
+  String CheckDestinationZone = "PQR";
+  double CheckWeightInKg = 5;
   switch(CheckDestinationZone){
     case "ABC":
-      print("Shipping Cost: ${weightInKg * 7}");
+      print("Shipping Cost: ${CheckWeightInKg * 7}");
       break;
     case "PQR":
-      print("Shipping Cost: ${weightInKg * 10}");
+      print("Shipping Cost: ${CheckWeightInKg * 10}");
       break;
     case "XYZ":
-      print("Shipping Cost: ${weightInKg * 5}");
+      print("Shipping Cost: ${CheckWeightInKg * 5}");
       break;
   }
 }
