@@ -125,26 +125,57 @@
 // }
 
 //working with class in dart
-void main(){
-  final cookie = Cookie("Square", 12.5);
-  print(cookie.shape);
-  print(cookie.size);
-  //this is to access the class without a constructor
-  // print('${Cookie().size} cm');
-  // Cookie().baking();
+// void main(){
+//   final cookie = Cookie("Square", 12.5);
+//   print(cookie.shape);
+//   print(cookie.size);
+//   //this is to access the class without a constructor
+//   // print('${Cookie().size} cm');
+//   // Cookie().baking();
+// }
+// class Cookie{
+//   String shape;
+//   double size;
+//   // String shape = "Square";
+//   // double size = 15.2;
+//   //below is constructor
+//   Cookie(this.shape, this.size){
+//     print("Constructor Cookies Printed");
+//     // baking();
+//   }
+//   //this is a method
+//   // void baking() {
+//   //   print("Baking has started");
+//   // }
+// }
+
+void main() {
+  Car car = Car();
+  print(car.noOfWheel);
+  print(car.isLightOn);
+  print(car.type);
+  Truck truck = Truck();
+  print(truck.noOfWheel);
+  print(truck.isLightOn);
 }
-class Cookie{
-  String shape;
-  double size;
-  // String shape = "Square";
-  // double size = 15.2;
-  //below is constructor
-  Cookie(this.shape, this.size){
-    print("Constructor Cookies Printed");
-    // baking();
+
+class Vehicle {
+  String type = "Honda";
+  int speed = 10;
+  bool isLightOn = true;
+}
+
+class Car extends Vehicle {
+
+  int noOfWheel = 4;
+  void printSomething() {
+    print(noOfWheel);
   }
-  //this is a method
-  // void baking() {
-  //   print("Baking has started");
-  // }
+}
+class Truck extends Car {
+
+  int noOfWheel = 8;
+  void printSomething() {
+    print(noOfWheel);
+  }
 }
