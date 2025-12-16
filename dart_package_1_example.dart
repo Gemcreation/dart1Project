@@ -174,8 +174,8 @@ class Car extends Vehicle {
 }
 class Truck extends Car {
 
-  // int noOfWheel = 8;
-  // void printSomething() {
-  //   print(noOfWheel);
-  // }
+  int noOfWheel = 8;
+  void printSomething() {
+    print(noOfWheel);
+  }
 }
