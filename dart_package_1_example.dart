@@ -149,38 +149,80 @@
 //   // }
 // }
 
+// void main() {
+//   final car = Car();
+//   print(car.noOfWheel);
+//   print(car.isLightOn);
+//   print(car.type);
+//   print(car.greeting);
+//   Truck truck = Truck();
+//   print(truck.noOfWheel);
+//   print(truck.isLightOn);
+// }
+
+// class SomeClass {
+//   final String greeting = "Hello";
+// }
+
+// class Vehicle extends SomeClass{
+//   String type = "Honda";
+//   int speed = 10;
+//   bool isLightOn = true;
+// }
+
+// class Car extends Vehicle {
+
+//   int noOfWheel = 4;
+//   void printSomething() {
+//     print(noOfWheel);
+//   }
+// }
+// class Truck extends Car {
+
+//   int noOfWheel = 8;
+//   void printSomething() {
+//     print(noOfWheel);
+//   }
+
+//   //This is alll about the usage of constructor
+// }
 void main() {
   final car = Car();
   print(car.noOfWheel);
-  print(car.isLightOn);
-  print(car.type);
-  print(car.greeting);
-  Truck truck = Truck();
-  print(truck.noOfWheel);
-  print(truck.isLightOn);
+  print(car.isNightOn);
+  car.acceleration();
 }
+class Vehicle{
+  bool isEngineWorking = false;
+  bool isNightOn = true;
+  int noOfWheel = 10;
 
-class SomeClass {
-  final String greeting = "Hello";
-}
-
-class Vehicle extends SomeClass{
-  String type = "Honda";
-  int speed = 10;
-  bool isLightOn = true;
-}
-
-class Car extends Vehicle {
-
-  int noOfWheel = 4;
-  void printSomething() {
-    print(noOfWheel);
+  void acceleration() {
+    print("Accelerating");
   }
 }
-class Truck extends Car {
 
-  int noOfWheel = 8;
-  void printSomething() {
-    print(noOfWheel);
+class Car implements Vehicle{
+  @override
+  bool isEngineWorking = false;
+  @override
+  bool isNightOn = true;
+  @override
+  int noOfWheel = 4;
+  @override
+  void acceleration() {
+    print("Accelerating the Car");
+  }
+}
+class Truck implements Vehicle{
+  @override
+  bool isEngineWorking = false;
+  @override
+  bool isNightOn = true;
+  @override
+  int noOfWheel = 6;
+  @override
+  void acceleration() {
+    print("Accelerating the truck");
   }
 }
