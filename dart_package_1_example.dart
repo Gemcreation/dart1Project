@@ -150,16 +150,21 @@
 // }
 
 void main() {
-  Car car = Car();
+  final car = Car();
   print(car.noOfWheel);
   print(car.isLightOn);
   print(car.type);
+  print(car.greeting);
   Truck truck = Truck();
   print(truck.noOfWheel);
   print(truck.isLightOn);
 }
 
-class Vehicle {
+class SomeClass {
+  final String greeting = "Hello";
+}
+
+class Vehicle extends SomeClass{
   String type = "Honda";
   int speed = 10;
   bool isLightOn = true;
