@@ -228,19 +228,44 @@
 // implementation
 // }
 
-void main() {
+// void main() {
+//   Animal cat = Cat();
+//   cat.sound();
+// }
+
+// abstract class Animal{
+//   void sound(){
+//     print("Animal are plenty");
+//     }
+// }
+// class Cat extends Animal{
+//   @override
+//   void sound(){
+//     print("Dog is barking");
+//   }
+// }
+//That's all about classes
+
+//Below is all about OOP(Object Oriented Programming)
+void main(){
   Animal cat = Cat();
   cat.sound();
+  cat = Dog();
+  cat.sound();
 }
-
-abstract class Animal{
+//polymorphisms: ability of an object to take many forms
+class Animal {
   void sound(){
-    print("Animal are plenty");
-    }
+    print("Animal making sound");
+  }
 }
-class Cat extends Animal{
-  @override
+class Cat extends Animal {
   void sound(){
-    print("Dog is barking");
+    print("Cat sounds Meuo");
+  }
+}
+class Dog extends Animal  {
+  void sound(){
+    print("Dog is Barking");
   }
 }
