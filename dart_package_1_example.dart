@@ -247,25 +247,47 @@
 //That's all about classes
 
 //Below is all about OOP(Object Oriented Programming)
+// void main(){
+//   // Animal cat = Cat();
+//   // cat.sound();
+//   // cat = Dog();
+//   // cat.sound();
+//   Cat cat = Cat();
+//   Dog dog = Dog();
+//   dog.sound();
+// }
+// //polymorphisms: ability of an object to take many forms
+// class Animal {
+//   void sound(){
+//     print("Animal making sound");
+//   }
+// }
+// class Cat extends Animal {
+//   void sound(){
+//     print("Cat sounds Meuo");
+//   }
+// }
+// class Dog extends Animal  {
+//   void sound(){
+//     print("Dog is Barking");
+//   }
+// }
+// we have nect the Abstraction, Inheritance, and Encapsulation
+//THat's all about OOP
+
 void main(){
-  Animal cat = Cat();
-  cat.sound();
-  cat = Dog();
-  cat.sound();
+  final anim = Person();
+  anim.sound();
 }
-//polymorphisms: ability of an object to take many forms
-class Animal {
-  void sound(){
-    print("Animal making sound");
-  }
+mixin Jump{
+  int jumping = 10;
 }
-class Cat extends Animal {
-  void sound(){
-    print("Cat sounds Meuo");
-  }
+mixin Scream{
+  bool isScream = false;
 }
-class Dog extends Animal  {
+class Person with Jump, Scream{
   void sound(){
-    print("Dog is Barking");
+    print("jumping: $jumping");
+    print("Perons: $isScream");
   }
 }
