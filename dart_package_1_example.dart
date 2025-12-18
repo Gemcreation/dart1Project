@@ -186,43 +186,61 @@
 
 //   //This is alll about the usage of constructor
 // }
+// void main() {
+//   final car = Car();
+//   print(car.noOfWheel);
+//   print(car.isNightOn);
+//   car.acceleration();
+// }
+// class Vehicle{
+//   bool isEngineWorking = false;
+//   bool isNightOn = true;
+//   int noOfWheel = 10;
+
+//   void acceleration() {
+//     print("Accelerating");
+//   }
+// }
+
+// class Car implements Vehicle{
+//   @override
+//   bool isEngineWorking = false;
+//   @override
+//   bool isNightOn = true;
+//   @override
+//   int noOfWheel = 4;
+//   @override
+//   void acceleration() {
+//     print("Accelerating the Car");
+//   }
+// }
+// class Truck implements Vehicle{
+//   @override
+//   bool isEngineWorking = false;
+//   @override
+//   bool isNightOn = true;
+//   @override
+//   int noOfWheel = 6;
+//   @override
+//   void acceleration() {
+//     print("Accelerating the truck");
+//   }
+// implementation
+// }
+
 void main() {
-  final car = Car();
-  print(car.noOfWheel);
-  print(car.isNightOn);
-  car.acceleration();
-}
-class Vehicle{
-  bool isEngineWorking = false;
-  bool isNightOn = true;
-  int noOfWheel = 10;
-
-  void acceleration() {
-    print("Accelerating");
-  }
+  Animal cat = Cat();
+  cat.sound();
 }
 
-class Car implements Vehicle{
-  @override
-  bool isEngineWorking = false;
-  @override
-  bool isNightOn = true;
-  @override
-  int noOfWheel = 4;
-  @override
-  void acceleration() {
-    print("Accelerating the Car");
-  }
+abstract class Animal{
+  void sound(){
+    print("Animal are plenty");
+    }
 }
-class Truck implements Vehicle{
+class Cat extends Animal{
   @override
-  bool isEngineWorking = false;
-  @override
-  bool isNightOn = true;
-  @override
-  int noOfWheel = 6;
-  @override
-  void acceleration() {
-    print("Accelerating the truck");
+  void sound(){
+    print("Dog is barking");
   }
 }
